@@ -53,5 +53,12 @@ public class PDFActivity extends AppCompatActivity {
             pdfView.fromAsset("costel.pdf").pages(1).load();
         }
 
+        if(value.equals("luminita"))
+        {
+            PDFView pdfView=findViewById(R.id.pdfView);
+            pdfView.fromAsset("luminita.pdf").pages(1).load();
+        }
+
+
     }
 }

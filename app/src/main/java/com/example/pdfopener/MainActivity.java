@@ -22,11 +22,14 @@ public class MainActivity extends AppCompatActivity
     Button btnLucia;
     Button btnCostel;
 
+    Button btnLuminita;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*
         setContentView(R.layout.activity_main);
 
         btnDarius=findViewById(R.id.buttonDarius);
@@ -37,7 +40,15 @@ public class MainActivity extends AppCompatActivity
         btnCostel=findViewById(R.id.buttonCostel);
 
 
+         */
 
+        setContentView(R.layout.activity_main_alice);
+        btnAlice=findViewById(R.id.buttonAlice);
+        btnLuminita=findViewById(R.id.buttonLuminita);
+
+
+
+        /*
         btnDarius.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,6 +122,32 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+
+         */
+
+        btnAlice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent myIntent = new Intent(MainActivity.this, PDFActivity.class);
+                myIntent.putExtra("nume","alice");
+                MainActivity.this.startActivity(myIntent);
+
+            }
+        });
+
+        btnLuminita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent myIntent = new Intent(MainActivity.this, PDFActivity.class);
+                myIntent.putExtra("nume","luminita");
+                MainActivity.this.startActivity(myIntent);
+
+            }
+        });
 
 
     }
